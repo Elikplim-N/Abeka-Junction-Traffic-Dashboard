@@ -129,23 +129,7 @@ const Dashboard = () => {
     }
   };
 
-  const handleBaudRateChange = async (newBaudRate) => {
-    setLoading(true);
-    setError('');
-    
-    try {
-      const response = await axios.post(`${API_BASE_URL}/baud-rate`, null, {
-        params: { new_baud_rate: newBaudRate }
-      });
-      
-      setBaudRate(newBaudRate);
-      setStatus((prev) => ({ ...prev, baud_rate: newBaudRate }));
-    } catch (err) {
-      setError('Failed to change baud rate');
-    } finally {
-      setLoading(false);
-    }
-  };
+  // handleBaudRateChange removed - not currently used in UI
 
   const calculateStatistics = () => {
     if (data.length === 0) return { avgGas: 0, maxGas: 0, minGas: 0, totalCount: 0 };
