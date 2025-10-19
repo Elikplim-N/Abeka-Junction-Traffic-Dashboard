@@ -6,8 +6,8 @@ import {
 import axios from 'axios';
 import './Dashboard.css';
 
-const API_BASE_URL = 'http://localhost:8000/api';
-const WS_URL = 'ws://localhost:8000/ws'
+const API_BASE_URL = '/api';
+const WS_URL = 'ws://localhost:8001/ws'
 
 const Dashboard = () => {
   const [ports, setPorts] = useState([]);
@@ -236,19 +236,19 @@ const Dashboard = () => {
             <h3>📊 Export Data</h3>
             <button 
               className="btn btn-export"
-              onClick={() => window.open('http://localhost:8000/api/export/readings-csv', '_blank')}
+              onClick={() => window.open('/api/export/readings-csv', '_blank')}
             >
               📥 Readings CSV
             </button>
             <button 
               className="btn btn-export"
-              onClick={() => window.open('http://localhost:8000/api/export/predictions-csv', '_blank')}
+              onClick={() => window.open('/api/export/predictions-csv', '_blank')}
             >
               📥 Predictions CSV
             </button>
             <button 
               className="btn btn-export"
-              onClick={() => window.open('http://localhost:8000/api/export/all-csv', '_blank')}
+              onClick={() => window.open('/api/export/all-csv', '_blank')}
             >
               📥 All Data CSV
             </button>

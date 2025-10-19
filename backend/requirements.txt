@@ -6,4 +6,4 @@ python-json-logger==2.0.7
 aiofiles==23.2.1
 websockets==12.0
 pydantic==2.4.2
-numpy==1.24.3
+numpy>=1.26.0
