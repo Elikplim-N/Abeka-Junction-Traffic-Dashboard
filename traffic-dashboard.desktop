@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Abeka Junction Traffic Dashboard
+Comment=Real-time traffic congestion prediction system
+Exec=bash -c 'cd /home/kofi-eli/Documents/traffic-dashboard && python backend_launcher.py'
+Icon=utilities-terminal
+Terminal=false
+Categories=Utility;
