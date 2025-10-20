@@ -6,8 +6,10 @@ import {
 import axios from 'axios';
 import './Dashboard.css';
 
-const API_BASE_URL = '/api';
-const WS_URL = 'ws://localhost:8001/ws'
+// Detect environment and set API URL
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE_URL = isLocalhost ? '/api' : window.location.origin + '/api';
+const WS_URL = isLocalhost ? 'ws://localhost:8001/ws' : window.location.origin.replace(/^http/, 'ws') + '/ws'
 
 const Dashboard = () => {
   const [ports, setPorts] = useState([]);
